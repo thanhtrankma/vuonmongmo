@@ -38,17 +38,33 @@ export async function POST(request: Request) {
     `💰 Tổng: ${new Intl.NumberFormat('vi-VN').format(total || 0)}đ`,
   ].join('\n')
 
-  const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: chatId, text: message }),
-  })
+  try {
+    console.log('Sending to Telegram...')
+    const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`
+    
+    const res = await fetch(telegramUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: message }),
+    })
 
-  if (!res.ok) {
-    const err = await res.text()
-    return NextResponse.json({ error: 'Failed to send telegram', detail: err }, { status: 500 })
+    console.log('Telegram response status:', res.status)
+    
+    if (!res.ok) {
+      const err = await res.text()
+      console.error('Telegram error:', err)
+      return NextResponse.json({ error: 'Failed to send telegram', detail: err }, { status: 500 })
+    }
+
+    const result = await res.json()
+    console.log('Telegram success:', result)
+    return NextResponse.json({ ok: true })
+  } catch (error) {
+    console.error('Fetch error:', error)
+    return NextResponse.json({ 
+      error: 'Fetch failed', 
+      detail: error instanceof Error ? error.message : String(error) 
+    }, { status: 500 })
   }
-
-  return NextResponse.json({ ok: true })
 }
 

@@ -6,6 +6,9 @@ export async function POST(request: Request) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN
   const chatId = process.env.TELEGRAM_CHAT_ID
 
+  console.log(botToken, chatId)
+  console.log(name, phone, address, items, total)
+
   if (!botToken || !chatId) {
     return NextResponse.json(
       { error: 'Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID' },

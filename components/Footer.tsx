@@ -55,7 +55,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-4 pt-2">
                 <a
-                  href="https://shopee.vn/vuonmongmo"
+                  href="https://shopee.vn/vuonmomang"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-100 hover:text-white"
@@ -69,7 +69,7 @@ export default function Footer() {
                   <span>Shopee</span>
                 </a>
                 <a
-                  href="https://facebook.com/vuonmongmo"
+                  href="https://facebook.com/vuonmomang"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-100 hover:text-white"
@@ -83,7 +83,7 @@ export default function Footer() {
                   <span>Facebook</span>
                 </a>
                 <a
-                  href="https://tiktok.com/@vuonmongmo"
+                  href="https://tiktok.com/@vuonmomang"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-100 hover:text-white"
@@ -117,7 +117,7 @@ export default function Footer() {
           </div>
           
           <div className="border-t border-white/20 pt-6 text-center text-gray-100">
-            <p>Copyright © 2023 Vườn mộng mơ. All rights reserved.</p>
+            <p>Copyright © 2023 Vườn mơ màng. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -22,7 +22,7 @@ export default function Home() {
     '@type': 'Store',
     name: 'Vườn Mộng Mơ',
     description: 'Nến thơm nghệ thuật từ những khu vườn đầy cảm hứng',
-    url: 'https://vuonmongmo.com',
+    url: 'https://vuonmomang.com',
     telephone: '03 656 14597',
     address: {
       '@type': 'PostalAddress',
@@ -31,9 +31,9 @@ export default function Home() {
       addressCountry: 'VN',
     },
     sameAs: [
-      'https://shopee.vn/vuonmongmo',
-      'https://facebook.com/vuonmongmo',
-      'https://tiktok.com/@vuonmongmo',
+      'https://shopee.vn/vuonmomang',
+      'https://facebook.com/vuonmomang',
+      'https://tiktok.com/@vuonmomang',
     ],
   }
 

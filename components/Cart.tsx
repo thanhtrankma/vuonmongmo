@@ -2,9 +2,10 @@
 
 import { useCart } from '@/contexts/CartContext'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function Cart() {
+  const router = useRouter()
   const {
     items,
     updateQuantity,
@@ -127,9 +128,15 @@ export default function Cart() {
                   </span>
                 </div>
                 
-                <Link href="/checkout" className="w-full btn-primary mb-2 text-center inline-block">
+                <button
+                  onClick={() => {
+                    setIsOpen(false)
+                    router.push('/checkout')
+                  }}
+                  className="w-full btn-primary mb-2"
+                >
                   Thanh toán
-                </Link>
+                </button>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="w-full btn-secondary"

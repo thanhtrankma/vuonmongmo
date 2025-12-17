@@ -15,12 +15,12 @@ export default function Header() {
             <div className="flex items-center gap-3">
               <Image
                 src="/images/logo.png"
-                alt="Vườn mộng mơ"
+                alt="Vườn mơ màng"
                 width={48}
                 height={48}
                 priority
               />
-              <span>Vườn mộng mơ</span>
+              <span>Vườn mơ màng</span>
             </div>
           </Link>
           

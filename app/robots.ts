@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://vuonmongmo.com/sitemap.xml',
+    sitemap: 'https://vuonmomang.com/sitemap.xml',
   }
 }
 

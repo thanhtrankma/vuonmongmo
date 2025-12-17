@@ -3,15 +3,18 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useCart } from '@/contexts/CartContext'
 
 export default function CheckoutPage() {
-  const { items, getTotalPrice, updateQuantity, removeFromCart } = useCart()
+  const router = useRouter()
+  const { items, getTotalPrice, updateQuantity, removeFromCart, clearCart } = useCart()
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [address, setAddress] = useState('')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
 
   const total = getTotalPrice()
 
@@ -36,7 +39,9 @@ export default function CheckoutPage() {
         throw new Error('Không gửi được thông báo, vui lòng thử lại.')
       }
 
+      clearCart()
       setMessage({ type: 'success', text: 'Đặt hàng thành công! Chúng tôi sẽ liên hệ sớm.' })
+      setShowSuccessModal(true)
     } catch (error) {
       setMessage({
         type: 'error',
@@ -48,7 +53,42 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen py-10 md:py-16">
+    <>
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={() => setShowSuccessModal(false)}
+          />
+          <div className="relative bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full mx-4 text-center animate-bounce-in">
+            <div className="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+              <span className="text-4xl">🎉</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Đặt hàng thành công!</h3>
+            <p className="text-gray-600 mb-6">
+              Cảm ơn bạn đã đặt hàng tại Vườn Mộng Mơ 💚<br />
+              Chúng tôi sẽ liên hệ sớm nhất!
+            </p>
+            <div className="flex flex-col gap-3">
+              <button
+                onClick={() => router.push('/')}
+                className="btn-primary w-full"
+              >
+                🏠 Về trang chủ
+              </button>
+              <button
+                onClick={() => router.push('/san-pham')}
+                className="btn-secondary w-full"
+              >
+                🛒 Tiếp tục mua sắm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="bg-gray-50 min-h-screen py-10 md:py-16">
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="mb-8 flex items-center justify-between">
           <div>
@@ -197,6 +237,7 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

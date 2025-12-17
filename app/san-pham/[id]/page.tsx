@@ -87,7 +87,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       availability: product.inStock
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      url: `https://vuonmongmo.com/san-pham/${product.id}`,
+      url: `https://vuonmomang.com/san-pham/${product.id}`,
     },
   }
 

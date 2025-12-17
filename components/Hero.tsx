@@ -17,7 +17,7 @@ export default function Hero() {
         <Image
           width={96}
           height={96}
-          alt="Logo Vườn mộng mơ"
+          alt="Logo Vườn mơ màng"
           className="w-24 h-24 rounded-full"
           src="/images/logo.png"
         />

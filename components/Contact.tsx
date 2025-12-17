@@ -20,7 +20,7 @@ export default function Contact() {
               />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Shopee</h3>
-            <p className="text-gray-600">Vườn mộng mơ</p>
+            <p className="text-gray-600">Vườn Mơ Màng</p>
           </div>
 
           {/* Facebook */}
@@ -34,7 +34,7 @@ export default function Contact() {
               />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Facebook</h3>
-            <p className="text-gray-600">56-58 Lê Hữu Kiều, P Bình Trưng Tây</p>
+            <p className="text-gray-600">Vườn Mơ Màng</p>
           </div>
 
           {/* TikTok */}
@@ -48,7 +48,7 @@ export default function Contact() {
               />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Tiktok</h3>
-            <p className="text-gray-600">DT848, Tân Khánh Đồng, TP Sa Đéc</p>
+            <p className="text-gray-600">Vườn Mơ Màng</p>
           </div>
         </div>
       </div>

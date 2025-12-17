@@ -17,15 +17,15 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: 'Sản phẩm không tìm thấy - Vườn Mộng Mơ',
+      title: 'Sản phẩm không tìm thấy - Vườn Mơ Màng',
     }
   }
 
   return {
-    title: `${product.title || product.name} - Vườn Mộng Mơ`,
+    title: `${product.title || product.name} - Vườn Mơ Màng`,
     description: product.description,
     openGraph: {
-      title: `${product.title || product.name} - Vườn Mộng Mơ`,
+      title: `${product.title || product.name} - Vườn Mơ Màng`,
       description: product.description,
       images: [product.image],
       type: 'website',
@@ -78,7 +78,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     image: product.images || [product.image],
     brand: {
       '@type': 'Brand',
-      name: 'Vườn Mộng Mơ',
+      name: 'Vườn Mơ Màng',
     },
     offers: {
       '@type': 'Offer',

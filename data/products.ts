@@ -3,10 +3,10 @@ import { Product } from '@/types/product'
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Hoa Mộng Mơ',
-    title: 'Hoa Mộng Mơ – Khoảnh Khắc Dịu Dàng Trong Khu Vườn Nhỏ',
+    name: 'Hoa Mơ Màng',
+    title: 'Hoa Mơ Màng – Khoảnh Khắc Dịu Dàng Trong Khu Vườn Nhỏ',
     description:
-      'Giữa khu vườn tĩnh lặng, một bông hoa mềm mại khẽ rung rinh trong làn gió nhẹ. "Hoa Mộng Mơ" kể câu chuyện về những phút giây dịu dàng, nơi ánh nến phủ lên không gian một sắc hồng ấm áp, nhắc ta nhớ rằng yêu thương có thể nở hoa từ những điều nhỏ bé nhất. Mùi hương nhẹ nhàng như tấm chăn mềm, ôm trọn cảm xúc đang cần được vỗ về. Mỗi lần thắp nến, bạn như được đưa về những ngày bình yên, nơi bầu trời trong vắt và những giấc mơ được thủ thỉ bên tai. Ánh sáng êm dịu giúp bạn thả lỏng, lắng nghe trái tim mình và giữ lại những điều đẹp đẽ nhất.',
+      'Giữa khu vườn tĩnh lặng, một bông hoa mềm mại khẽ rung rinh trong làn gió nhẹ. "Hoa Mơ Màng" kể câu chuyện về những phút giây dịu dàng, nơi ánh nến phủ lên không gian một sắc hồng ấm áp, nhắc ta nhớ rằng yêu thương có thể nở hoa từ những điều nhỏ bé nhất. Mùi hương nhẹ nhàng như tấm chăn mềm, ôm trọn cảm xúc đang cần được vỗ về. Mỗi lần thắp nến, bạn như được đưa về những ngày bình yên, nơi bầu trời trong vắt và những giấc mơ được thủ thỉ bên tai. Ánh sáng êm dịu giúp bạn thả lỏng, lắng nghe trái tim mình và giữ lại những điều đẹp đẽ nhất.',
     price: 500000,
     image: '/images/nang_mong_mo/nang_mong_mo.jpg',
     images: [

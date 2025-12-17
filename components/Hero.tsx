@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/cover.png"
-          alt="Nến thơm Vườn Mộng Mơ"
+          alt="Nến thơm Vườn Mơ Màng"
           fill
           className="object-cover"
           priority
@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-        🌿🌿 VƯỜN MỘNG MƠ 🌿🌿
+        🌿🌿 VƯỜN MƠ MÀNG 🌿🌿
         </h1>
         <p className="text-lg md:text-xl max-w-6xl mx-auto leading-relaxed">
         🌿🌿 Nến thơm dẫn lối, hương thơm ngọt lành,chào mừng bạn đến với khu vườn của những giấc mơ đẹp ! 🌿🌿

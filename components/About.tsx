@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Về Vườn Mộng Mơ
+              Về Vườn Mơ Màng
             </h2>
             <h3 className="text-2xl font-semibold text-primary-700 mb-4">
               🌿✨ Khi giấc mơ hóa hương thơm 🕯️🌸
@@ -46,7 +46,7 @@ export default function About() {
           <div className="relative h-[900px] rounded-lg overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop"
-              alt="Về Vườn Mộng Mơ"
+              alt="Về Vườn Mơ Màng"
               fill
               className="object-cover"
             />

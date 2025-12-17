@@ -4,7 +4,7 @@ export default function ProductGallery() {
   const images = [
     {
       src: '/images/nang_mong_mo/nang_mong_mo.jpg',
-      alt: 'Nến thơm Vườn Mộng Mơ',
+      alt: 'Nến thơm Vườn Mơ Màng',
     },
     {
       src: '/images/gai_diu_dang/gai_diu_dang.jpg',

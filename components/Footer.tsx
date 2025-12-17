@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="relative container mx-auto px-4 py-10">
           <div className="grid md:grid-cols-2 gap-10 mb-10">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Vườn Mộng Mơ</h3>
+              <h3 className="text-2xl font-bold">Vườn Mơ Màng</h3>
               <div className="space-y-3 text-gray-100">
                 <div className="flex items-start gap-3">
                   <Image
@@ -110,7 +110,7 @@ export default function Footer() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Bản đồ Vườn Mộng Mơ"
+                  title="Bản đồ Vườn Mơ Màng"
                 />
               </div>
             </div>

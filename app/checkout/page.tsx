@@ -67,7 +67,7 @@ export default function CheckoutPage() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Đặt hàng thành công!</h3>
             <p className="text-gray-600 mb-6">
-              Cảm ơn bạn đã đặt hàng tại Vườn Mộng Mơ 💚<br />
+              Cảm ơn bạn đã đặt hàng tại Vườn Mơ Màng 💚<br />
               Chúng tôi sẽ liên hệ sớm nhất!
             </p>
             <div className="flex flex-col gap-3">

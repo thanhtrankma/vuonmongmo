@@ -3,11 +3,11 @@ import ProductCard from '@/components/ProductCard'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sản Phẩm - Vườn Mộng Mơ',
-  description: 'Khám phá bộ sưu tập nến thơm nghệ thuật của Vườn Mộng Mơ. Từ hoa mộng mơ đến gai dịu dàng, mỗi sản phẩm là một tác phẩm nghệ thuật độc đáo.',
+  title: 'Sản Phẩm - Vườn Mơ Màng',
+  description: 'Khám phá bộ sưu tập nến thơm nghệ thuật của Vườn Mơ Màng. Từ hoa mộng mơ đến gai dịu dàng, mỗi sản phẩm là một tác phẩm nghệ thuật độc đáo.',
   openGraph: {
-    title: 'Sản Phẩm - Vườn Mộng Mơ',
-    description: 'Khám phá bộ sưu tập nến thơm nghệ thuật của Vườn Mộng Mơ',
+    title: 'Sản Phẩm - Vườn Mơ Màng',
+    description: 'Khám phá bộ sưu tập nến thơm nghệ thuật của Vườn Mơ Màng',
     type: 'website',
   },
 }
@@ -16,7 +16,7 @@ export default function ProductsPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Sản Phẩm Vườn Mộng Mơ',
+    name: 'Sản Phẩm Vườn Mơ Màng',
     description: 'Bộ sưu tập nến thơm nghệ thuật',
     mainEntity: {
       '@type': 'ItemList',

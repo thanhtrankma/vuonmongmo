@@ -1,4 +1,4 @@
-# Vườn Mộng Mơ - Website Bán Nến Thơm
+# Vườn Mơ Màng - Website Bán Nến Thơm
 
 Website bán hàng nến thơm được xây dựng với Next.js, TypeScript và Tailwind CSS.
 

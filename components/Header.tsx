@@ -29,13 +29,16 @@ export default function Header() {
               Về chúng tôi
             </Link>
             <Link href="/san-pham" className="text-gray-700 hover:text-primary-600 transition-colors">
-              Sản Phẩm
+              Sản phẩm
             </Link>
             <Link href="/#hinh-anh" className="text-gray-700 hover:text-primary-600 transition-colors">
-              Hình Ảnh
+              Hình ảnh
+            </Link>
+            <Link href="/truyen-mo-mang" className="text-gray-700 hover:text-primary-600 transition-colors">
+              Truyện mơ màng
             </Link>
             <Link href="/#lien-he" className="text-gray-700 hover:text-primary-600 transition-colors">
-              Liên Hệ
+              Liên hệ
             </Link>
           </div>
 

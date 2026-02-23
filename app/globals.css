@@ -22,3 +22,32 @@
   }
 }
 
+@layer utilities {
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition-property: opacity, transform;
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal-left {
+    transform: translateX(-40px);
+  }
+
+  .scroll-reveal-right {
+    transform: translateX(40px);
+  }
+
+  .scroll-reveal-up {
+    transform: translateY(40px);
+  }
+
+  .scroll-reveal-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+

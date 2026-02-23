@@ -1,6 +1,7 @@
 import { products } from '@/data/products'
 import ProductCard from '@/components/ProductCard'
 import { Metadata } from 'next'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Sản Phẩm - Vườn Mơ Màng',
@@ -46,18 +47,24 @@ export default function ProductsPage() {
       />
       <div className="py-16 md:py-24 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
-            Tất cả sản phẩm
-          </h1>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Khám phá bộ sưu tập nến thơm nghệ thuật của chúng tôi. Mỗi sản phẩm được chế tác thủ công với tình yêu và sự chăm chút.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          <ScrollReveal direction="up">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
+                Tất cả sản phẩm
+              </h1>
+              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Khám phá bộ sưu tập nến thơm nghệ thuật của chúng tôi. Mỗi sản phẩm được chế tác thủ công với tình yêu và sự chăm chút.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="left">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </>

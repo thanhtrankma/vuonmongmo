@@ -3,6 +3,7 @@ import About from '@/components/About'
 import FeaturedProducts from '@/components/FeaturedProducts'
 import ProductGallery from '@/components/ProductGallery'
 import Contact from '@/components/Contact'
+import ScrollReveal from '@/components/ScrollReveal'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -43,11 +44,21 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Hero />
-      <About />
-      <FeaturedProducts />
-      <ProductGallery />
-      <Contact />
+      <ScrollReveal direction="up">
+        <Hero />
+      </ScrollReveal>
+      <ScrollReveal direction="left">
+        <About />
+      </ScrollReveal>
+      <ScrollReveal direction="right">
+        <FeaturedProducts />
+      </ScrollReveal>
+      <ScrollReveal direction="left">
+        <ProductGallery />
+      </ScrollReveal>
+      <ScrollReveal direction="right">
+        <Contact />
+      </ScrollReveal>
     </>
   )
 }

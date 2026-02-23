@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
-  const { name, phone, address, items, total } = await request.json()
+  const {
+    name,
+    phone,
+    address,
+    note,
+    items,
+    total,
+    orderCode,
+    transactionCode,
+  } = await request.json()
 
   const botToken = process.env.TELEGRAM_BOT_TOKEN
   const chatId = process.env.TELEGRAM_CHAT_ID
@@ -23,17 +32,38 @@ export async function POST(request: Request) {
           .join('\n')
       : 'Không có sản phẩm'
 
-  const message = [
+  const messageLines = [
     '🧾 Đơn hàng mới từ Vườn Mơ Màng',
+  ]
+
+  if (orderCode) {
+    messageLines.push(`📦 Mã đơn: ${orderCode}`)
+  }
+
+  if (transactionCode) {
+    messageLines.push(`🔁 Mã GD/Tham chiếu: ${transactionCode}`)
+  }
+
+  messageLines.push(
+    '',
     `👤 Tên: ${name || 'Chưa cung cấp'}`,
     `📞 SĐT: ${phone || 'Chưa cung cấp'}`,
-    `🏠 Địa chỉ: ${address || 'Chưa cung cấp'}`,
+    `🏠 Địa chỉ: ${address || 'Chưa cung cấp'}`
+  )
+
+  if (note) {
+    messageLines.push(`📝 Ghi chú: ${note}`)
+  }
+
+  messageLines.push(
     '',
     '🛒 Sản phẩm:',
     itemsText,
     '',
-    `💰 Tổng: ${new Intl.NumberFormat('vi-VN').format(total || 0)}đ`,
-  ].join('\n')
+    `💰 Tổng: ${new Intl.NumberFormat('vi-VN').format(total || 0)}đ`
+  )
+
+  const message = messageLines.join('\n')
 
   try {
     const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`

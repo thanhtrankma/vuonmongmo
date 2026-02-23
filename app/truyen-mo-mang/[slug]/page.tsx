@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { candleStories } from '@/data/stories'
+import ScrollReveal from '@/components/ScrollReveal'
 
 interface StoryPageProps {
   params: {
@@ -51,41 +52,43 @@ export default function StoryPage({ params }: StoryPageProps) {
           </Link>
         </div>
 
-        <article>
-          <header className="mb-8">
-            <p className="text-xs font-semibold tracking-[0.3em] text-emerald-600 mb-3">
-              TRUYỆN MƠ MÀNG
-            </p>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              {story.title}
-            </h1>
-            {story.subtitle && (
-              <p className="text-base md:text-lg text-emerald-700 mb-3">
-                {story.subtitle}
+        <ScrollReveal direction="up">
+          <article>
+            <header className="mb-8">
+              <p className="text-xs font-semibold tracking-[0.3em] text-emerald-600 mb-3">
+                TRUYỆN MƠ MÀNG
               </p>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                {story.title}
+              </h1>
+              {story.subtitle && (
+                <p className="text-base md:text-lg text-emerald-700 mb-3">
+                  {story.subtitle}
+                </p>
+              )}
+              <p className="text-sm md:text-base text-gray-600">
+                {story.excerpt}
+              </p>
+            </header>
+
+            {story.coverImage && (
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={story.coverImage}
+                  alt={story.title}
+                  className="w-full h-72 md:h-80 object-cover"
+                />
+              </div>
             )}
-            <p className="text-sm md:text-base text-gray-600">
-              {story.excerpt}
-            </p>
-          </header>
 
-          {story.coverImage && (
-            <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-gray-100">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={story.coverImage}
-                alt={story.title}
-                className="w-full h-72 md:h-80 object-cover"
-              />
+            <div className="prose prose-sm md:prose-base prose-emerald max-w-none text-gray-800 leading-relaxed">
+              {story.content.split('\n\n').map((paragraph) => (
+                <p key={paragraph.slice(0, 20)}>{paragraph}</p>
+              ))}
             </div>
-          )}
-
-          <div className="prose prose-sm md:prose-base prose-emerald max-w-none text-gray-800 leading-relaxed">
-            {story.content.split('\n\n').map((paragraph) => (
-              <p key={paragraph.slice(0, 20)}>{paragraph}</p>
-            ))}
-          </div>
-        </article>
+          </article>
+        </ScrollReveal>
       </div>
     </main>
   )
